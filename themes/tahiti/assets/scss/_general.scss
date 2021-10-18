@@ -1,0 +1,9 @@
+* {
+  @include reset;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-family: $mainFont;
+}

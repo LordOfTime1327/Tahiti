@@ -140,14 +140,19 @@ add_action( 'widgets_init', 'tahiti_widgets_init' );
  * Enqueue scripts and styles.
  */
 function tahiti_scripts() {
-	wp_enqueue_style( 'tahiti-style', get_stylesheet_uri(), array(), _S_VERSION );
-	wp_style_add_data( 'tahiti-style', 'rtl', 'replace' );
-
-	wp_enqueue_script( 'tahiti-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
-
-	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
-		wp_enqueue_script( 'comment-reply' );
+	if ( !is_admin() ) {
+	  wp_deregister_script( 'jquery' );
+	  wp_register_script( 'jquery', ( 'https://code.jquery.com/jquery-3.5.1.min.js' ), false, null, true );
+	  wp_enqueue_script( 'jquery' );
 	}
+
+	wp_enqueue_style( 'tahiti-main-style', get_template_directory_uri() . '/dist/main.css' );
+
+	wp_enqueue_script( 'tahiti-navigation', get_template_directory_uri() . '/dist/app.min.js', array(), false, true );
+
+	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
+	// 	wp_enqueue_script( 'comment-reply' );
+	// }
 }
 add_action( 'wp_enqueue_scripts', 'tahiti_scripts' );
 
@@ -178,3 +183,48 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Adding needed menus
+ */
+add_action( 'after_setup_theme', function(){
+	register_nav_menus( [
+		'main-menu' => 'Main Menu',
+		'footer-menu' => 'Footer Menu',
+		'mobile-menu' => 'Mobile Menu',
+		'side-menu' => 'Side Menu',
+	] );
+} );
+
+/**
+ * Adding ACF page
+ */
+if( function_exists('acf_add_options_page') ) {
+	acf_add_options_page();
+}
+
+/**
+ * Add ACF options page
+ */
+if( function_exists('acf_add_options_page') ) {
+
+	acf_add_options_page(array(
+		'page_title' 	=> 'Theme General Settings',
+		'menu_title'	=> 'Theme Settings',
+		'menu_slug' 	=> 'theme-general-settings',
+		'position' => 80,
+		'capability'	=> 'edit_posts',
+		'redirect'		=> false
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme Footer Settings',
+		'menu_title'	=> 'Footer',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+
+	acf_add_options_sub_page(array(
+		'page_title' 	=> 'Theme 404 Settings',
+		'menu_title'	=> '404',
+		'parent_slug'	=> 'theme-general-settings',
+	));
+}

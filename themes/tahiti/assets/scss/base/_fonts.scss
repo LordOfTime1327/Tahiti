@@ -1,0 +1,52 @@
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/GothamBook.eot");
+  src: url("../assets/fonts/GothamBook.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/GothamBook.woff2") format("woff2"),
+    url("../assets/fonts/GothamBook.woff") format("woff"),
+    url("../assets/fonts/GothamBook.ttf") format("truetype");
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/GothamLight.eot");
+  src: url("../assets/fonts/GothamLight.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/GothamLight.woff2") format("woff2"),
+    url("../assets/fonts/GothamLight.woff") format("woff"),
+    url("../assets/fonts/GothamLight.ttf") format("truetype");
+
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url("../assets/fonts/GothamBold.eot");
+  src: url("../assets/fonts/GothamBold.eot?#iefix") format("embedded-opentype"),
+    url("../assets/fonts/GothamBold.woff2") format("woff2"),
+    url("../assets/fonts/GothamBold.woff") format("woff"),
+    url("../assets/fonts/GothamBold.ttf") format("truetype");
+
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "GothamNarrow";
+  src: url("../assets/fonts/GothamNarrowLightItalic.eot");
+  src: url("../assets/fonts/GothamNarrowLightItalic.eot?#iefix")
+      format("embedded-opentype"),
+    url("../assets/fonts/GothamNarrowLightItalic.woff2") format("woff2"),
+    url("../assets/fonts/GothamNarrowLightItalic.woff") format("woff"),
+    url("../assets/fonts/GothamNarrowLightItalic.ttf") format("truetype");
+
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}

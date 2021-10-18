@@ -23,6 +23,8 @@
     "webpack-stream": "^6.1.1"
   },
   "dependencies": {
-    "@babel/runtime": "^7.12.5"
+    "@babel/runtime": "^7.12.5",
+    "@fancyapps/ui": "^4.0.6",
+    "bootstrap": "^5.1.3"
   }
 }
