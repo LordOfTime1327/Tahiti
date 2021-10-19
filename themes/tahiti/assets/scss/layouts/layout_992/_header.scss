@@ -1,0 +1,38 @@
+.header {
+  padding: 28px 0;
+
+  &__burger {
+    display: none;
+  }
+
+  &__logo-box {
+    max-width: 180px;
+  }
+}
+
+.header-menu {
+  display: block;
+  height: auto;
+  position: static;
+
+  &.active {
+    height: auto;
+  }
+
+  &__list {
+    @include flex(flex-end, center);
+
+    .menu-item {
+      text-align: left;
+      padding-bottom: 0;
+      padding: 10px 29px;
+      border-right: 1px solid $menuBorder;
+
+      &:last-child {
+        padding-right: 0;
+        padding-bottom: 10px;
+        border-right: 0;
+      }
+    }
+  }
+}
