@@ -1,0 +1,17 @@
+.experience {
+  padding: 50px 0;
+
+  &__subtitle {
+    padding-bottom: 180px;
+  }
+
+  &__text-box {
+    @include font-size(18, 28);
+    padding-bottom: 25px;
+  }
+
+  &__btn {
+    padding: 15px 50px;
+    @include font-size(18);
+  }
+}

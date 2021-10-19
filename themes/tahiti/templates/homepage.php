@@ -32,6 +32,18 @@ get_header();
     </div>
     <?php endif; ?>
   </section>
+
+  <section class="experience">
+    <img src="<?= get_field( 'bg_exp' ); ?>" alt="" class="experience__bg">
+    <div class="container experience__row">
+      <div class="title experience__title"><?= get_field( 'title_exp' ); ?></div>
+      <p class="subtitle experience__subtitle"><?= get_field( 'subtitle_exp' ); ?></p>
+      <div class="experience__text-box">
+        <?= get_field( 'text_exp' ); ?>
+      </div>
+      <a href="#" class='experience__btn'><?= get_field( 'btn_exp' ); ?></a>
+    </div>
+  </section>
 </main>
 
 <?php get_footer(); ?>
