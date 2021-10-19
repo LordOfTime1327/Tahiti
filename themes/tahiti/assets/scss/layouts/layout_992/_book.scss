@@ -1,0 +1,27 @@
+.book {
+  padding: 135px 0;
+
+  &__text-box {
+    padding: 68px 100px;
+  }
+
+  &__title {
+    padding-bottom: 30px;
+  }
+
+  &__text {
+    @include font-size(20, 30);
+    padding-bottom: 35px;
+  }
+
+  &__btn {
+    padding: 22px 82px;
+    @include font-size(20);
+
+    transition: background 0.3s ease;
+
+    &:hover {
+      background: #1996a3;
+    }
+  }
+}

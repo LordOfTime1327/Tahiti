@@ -44,6 +44,18 @@ get_header();
       <a href="#" class='experience__btn'><?= get_field( 'btn_exp' ); ?></a>
     </div>
   </section>
+
+  <section class="book">
+    <img src="<?= get_field( 'bg_book' ); ?>" alt="" class="book__bg">
+
+    <div class="container">
+      <div class="book__text-box">
+        <h2 class="title book__title"><?= get_field( 'title_book' ); ?></h2>
+        <p class="book__text"><?= get_field( 'text_book' ); ?></p>
+        <a href="#" class="book__btn"><?= get_field( 'btn_text_book' ); ?></a>
+      </div>
+    </div>
+  </section>
 </main>
 
 <?php get_footer(); ?>

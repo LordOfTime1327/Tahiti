@@ -1,0 +1,40 @@
+.book {
+  position: relative;
+  padding: 50px 0;
+
+  &__bg {
+    @include img-cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+  }
+
+  &__text-box {
+    background: rgba($black, 0.5);
+    padding: 30px;
+
+    color: $bookText;
+    text-align: center;
+  }
+
+  &__title {
+    padding-bottom: 15px;
+  }
+
+  &__text {
+    @include font-size(16, 26);
+    padding-bottom: 15px;
+  }
+
+  &__btn {
+    display: inline-block;
+    background: $bookBtnBg;
+    padding: 10px 30px;
+
+    @include font-size(16);
+    color: $bookBtn;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
