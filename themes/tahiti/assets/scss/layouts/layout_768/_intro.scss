@@ -1,0 +1,14 @@
+.intro {
+  &__text-box {
+    padding: 180px 0;
+  }
+
+  &__title {
+    @include font-size(40);
+    padding-bottom: 15px;
+  }
+
+  &__subtitle {
+    @include font-size(24);
+  }
+}

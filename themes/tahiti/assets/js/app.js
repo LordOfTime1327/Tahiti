@@ -1,5 +1,7 @@
 import "../../node_modules/bootstrap/dist/js/bootstrap.bundle.js";
 
+import "./sliders.js";
+
 let html = document.querySelector("html");
 // BURGER MENU
 let burger = document.querySelector(".header__burger"),

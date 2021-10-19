@@ -5,6 +5,11 @@
 
 @import "./node_modules/bootstrap/scss/grid";
 
+// Slick slider
+@import "./node_modules/slick-carousel/slick/slick.scss";
+@import "./node_modules/slick-carousel/slick/slick-theme.scss";
+
+//Custom
 @import "fonts";
 
 @import "vars";
