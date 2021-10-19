@@ -1,0 +1,13 @@
+.why {
+  padding: 80px 0 50px;
+
+  &__title {
+    padding-bottom: 50px;
+  }
+
+  &__item {
+    padding: 0 30px 30px;
+
+    @include font-size(18, 30);
+  }
+}

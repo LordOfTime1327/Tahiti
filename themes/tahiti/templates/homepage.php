@@ -45,9 +45,26 @@ get_header();
     </div>
   </section>
 
+  <section class="why">
+    <div class="container">
+      <div class='title why__title'><?= get_field( 'title_why' ); ?></div>
+
+      <?php if( have_rows('items_why') ): ?>
+      <div class="why__items">
+        <?php while( have_rows('items_why') ) : the_row(); ?>
+        <div class='why__item' style='flex: 0 0 <?= get_sub_field( 'block_width_why' ); ?>%'>
+          <div class="why__text-box">
+            <?= get_sub_field( 'item_why' ); ?>
+          </div>
+        </div>
+        <?php endwhile; ?>
+      </div>
+      <?php endif; ?>
+    </div>
+  </section>
+
   <section class="book">
     <img src="<?= get_field( 'bg_book' ); ?>" alt="" class="book__bg">
-
     <div class="container">
       <div class="book__text-box">
         <h2 class="title book__title"><?= get_field( 'title_book' ); ?></h2>
