@@ -1,5 +1,16 @@
 .experience {
   padding: 80px 0;
+  overflow: hidden;
+
+  &:hover {
+    .experience__bg {
+      transform: scale(1.1) rotate(-2deg);
+    }
+  }
+
+  &__bg {
+    transition: transform 0.5s ease;
+  }
 
   &__subtitle {
     padding-bottom: 240px;
@@ -18,7 +29,6 @@
 
     &:hover {
       background: #ce1e4a;
-      // filter: ;
     }
   }
 }

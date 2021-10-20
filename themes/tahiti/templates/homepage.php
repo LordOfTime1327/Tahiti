@@ -33,7 +33,7 @@ get_header();
     <?php endif; ?>
   </section>
 
-  <section class="discover">
+  <section id='discover' class="discover">
     <div class="container">
       <div class="title discover__title"><?= get_field( 'title_discover' ); ?></div>
       <p class="subtitle discover__subtitle"><?= get_field( 'subtitle_discover' ); ?></p>
@@ -100,7 +100,7 @@ get_header();
     </div>
   </section>
 
-  <section class="experience">
+  <section id='experience' class="experience">
     <img src="<?= get_field( 'bg_exp' ); ?>" alt="" class="experience__bg">
     <div class="container experience__row">
       <div class="title experience__title"><?= get_field( 'title_exp' ); ?></div>

@@ -67,6 +67,11 @@
     font-weight: $regularW;
     color: $discoverFooterPrice;
   }
+  &__card-arrow {
+    svg path {
+      fill: $white;
+    }
+  }
 
   &__select-title {
     @include font-size(16);

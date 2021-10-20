@@ -15,6 +15,15 @@ burger.addEventListener("click", function (e) {
   menu.classList.toggle("active");
 });
 
+let menuItem = document.querySelectorAll(".header-menu__list .menu-item");
+menuItem.forEach((item) => {
+  item.addEventListener("click", () => {
+    burger.classList.remove("close");
+    html.classList.remove("stop-scrolling");
+    menu.classList.remove("active");
+  });
+});
+
 Fancybox.bind("[data-fancybox]", {
   toolbar: false,
 });
