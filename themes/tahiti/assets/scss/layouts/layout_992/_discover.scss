@@ -1,0 +1,68 @@
+.discover {
+  padding: 80px 0;
+
+  &__subtitle {
+    padding-bottom: 45px;
+  }
+
+  &__slider {
+    margin-bottom: 60px;
+  }
+
+  &__card {
+    &:hover {
+      cursor: pointer;
+
+      .discover__card-arrow svg {
+        animation: discoverArrow 0.5s ease;
+      }
+    }
+  }
+
+  &__card-title {
+    @include font-size(24);
+  }
+
+  &__select-title {
+    @include font-size(20);
+    padding-bottom: 40px;
+  }
+
+  &__select-box {
+    .select2-selection {
+      height: 60px;
+
+      &__arrow {
+        b {
+          border-width: 7px 6px 0 6px !important;
+          margin-left: -6px !important;
+        }
+      }
+      &__rendered {
+        @include font-size(20);
+        line-height: 60px !important;
+      }
+    }
+  }
+
+  &__select-btn {
+    padding: 20px 65px;
+    @include font-size(20, 20);
+
+    transition: all 0.3s ease;
+
+    &:hover {
+      background: #35a281;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes discoverArrow {
+  0% {
+    transform: scaleY(0.7) scaleX(1.5);
+  }
+  100% {
+    transform: scaleY(1) scaleX(1);
+  }
+}

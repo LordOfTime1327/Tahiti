@@ -1,0 +1,41 @@
+.discover {
+  padding: 50px 0;
+
+  &__subtitle {
+    padding-bottom: 35px;
+  }
+
+  &__slider {
+    margin-bottom: 45px;
+  }
+
+  &__card-title {
+    @include font-size(20);
+  }
+
+  &__card-price {
+    @include font-size(18);
+  }
+
+  &__select-title {
+    @include font-size(18);
+    padding-bottom: 30px;
+  }
+
+  &__select-box {
+    .select2-selection {
+      height: 50px;
+
+      &__rendered {
+        @include font-size(18);
+        line-height: 50px !important;
+      }
+    }
+  }
+
+  &__select-btn {
+    flex: 0 1 225px;
+    padding: 15px 50px;
+    @include font-size(18, 18);
+  }
+}

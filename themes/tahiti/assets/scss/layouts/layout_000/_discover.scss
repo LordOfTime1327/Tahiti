@@ -1,0 +1,123 @@
+.discover {
+  padding: 30px 0;
+  background: $discoverBg;
+
+  &__title {
+    color: $discoverTitle;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+
+    * {
+      font-size: inherit;
+      text-transform: inherit;
+    }
+  }
+
+  &__subtitle {
+    color: $discoverSubitle;
+    padding-bottom: 25px;
+  }
+
+  &__slider {
+    margin: 0 -10px;
+    margin-bottom: 30px;
+  }
+  &__card {
+    box-shadow: 0 4px 10px rgba($black, 0.1);
+    margin: 0 10px;
+  }
+  &__card-img-box {
+    display: block;
+    width: 100%;
+    height: 170px;
+
+    img {
+      @include img-cover;
+    }
+  }
+  &__card-body {
+    padding: 20px;
+    background: $discoverCardBodyBg;
+  }
+  &__card-title {
+    @include font-size(18);
+    font-weight: $regularW;
+    color: $discoverCardTitle;
+    text-transform: uppercase;
+    padding-bottom: 15px;
+  }
+  &__card-content {
+    max-width: 245px;
+    width: 100%;
+    @include font-size(14, 18);
+    @include truncate(3, 18px);
+  }
+  &__card-footer {
+    background: $discoverFooterBg;
+    padding: 20px;
+    @include flex(space-between, center, row, nowrap);
+  }
+  &__card-price-box {
+    @include font-size(13);
+    color: #ceefe5;
+    text-transform: uppercase;
+  }
+  &__card-price {
+    @include font-size(16);
+    font-weight: $regularW;
+    color: $discoverFooterPrice;
+  }
+
+  &__select-title {
+    @include font-size(16);
+    font-weight: $lightW;
+    color: $discoverSelectTitle;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+
+  &__select-box {
+    @include flex(flex-start, stretch, row, nowrap);
+    max-width: 900px;
+    width: 100%;
+    margin: 0 auto;
+
+    .select2 {
+      flex: 1;
+      font-weight: $regularW;
+    }
+    .select2-selection {
+      border: 0;
+      border-radius: 0;
+      height: 40px;
+
+      &__arrow {
+        top: 50% !important;
+        right: 7px !important;
+        transform: translateY(-50%);
+      }
+      &__rendered {
+        line-height: 40px !important;
+        padding: 0 27px 0 20px !important;
+      }
+    }
+  }
+
+  &__select-btn {
+    display: block;
+    padding: 10px 30px;
+    background: $discoverSelectBtn;
+    border: none;
+    @include font-size(16, 16);
+    color: $discoverSelectBtnText;
+    text-transform: uppercase;
+  }
+}
+
+.select2-dropdown {
+  border: 0;
+  border-radius: 0;
+}
+.select2-results__option {
+  padding: 6px 20px;
+}

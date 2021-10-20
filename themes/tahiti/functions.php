@@ -149,6 +149,7 @@ function tahiti_scripts() {
 	wp_enqueue_style( 'tahiti-main-style', get_template_directory_uri() . '/dist/main.css' );
 
 	wp_enqueue_script( 'tahiti-slick', '//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.min.js', array(), false, true );
+	wp_enqueue_script( 'tahiti-select2', 'https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js', array(), false, true );
 	wp_enqueue_script( 'tahiti-navigation', get_template_directory_uri() . '/dist/app.min.js', array(), false, true );
 
 	// if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
