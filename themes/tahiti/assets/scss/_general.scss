@@ -7,6 +7,7 @@
 body {
   font-family: $mainFont;
   font-weight: $lightW;
+  overflow-x: hidden;
 }
 
 .stop-scrolling {
@@ -24,6 +25,10 @@ body {
 }
 .subtitle {
   @include font-size(14);
+}
+
+.a2a_svg {
+  border-radius: 50% !important;
 }
 
 @media only screen and (min-width: 768px) {

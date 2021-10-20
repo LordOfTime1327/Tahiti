@@ -27,7 +27,9 @@
   <header class="header">
     <div class="container header__row">
       <div class="header__logo-box">
-        <?= file_get_contents( get_attached_file( get_field( 'logo', 'option' ) ) ); ?>
+        <a href="<?= home_url(); ?>" class='header__logo-link'>
+          <?= file_get_contents( get_attached_file( get_field( 'logo', 'option' ) ) ); ?>
+        </a>
       </div>
 
       <nav class='header__nav header-menu'>
